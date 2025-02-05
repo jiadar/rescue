@@ -2,11 +2,23 @@
 To use this rescue file, decrypt with AES tool (base 64, UTF-8, 256 bits, CBC, PKCS7, PBKDF2, SHA256, passphrase. 
 <p>
 Use the tool here: https://emn178.github.io/online-tools/aes/decrypt/
+<p>
+It was created with this command using the computer password.
+<pre>
+openssl enc -aes-256-cbc -pbkdf2 -in ../secrets.txt -out secrets.enc
+cat secrets.enc | base64
+</pre>
 <pre>
 U2FsdGVkX183hd4ep+58Bwc/AYEEKmD3fMYrQH8Z4fVA9IC9EnCUdfXfmzFJThRSG6GX3HoeDth1zSVaxFko0/B9QuZYPrH+R0rMnLe9s4BS8XHueFtEoUFLsg3cOBUX+kg8ISnmC3gu19mJAR3zn/cJnhXBZsu4kFiMXoYupSSOzpXlaT1mGzZob7K2nvs+HuNr6bL23GOJJCAVeVHdpdGL0c1ipAFNyJxqyFa+lRzIEZLbOh+hQzdIqtgnIy9D5NeEW9cDUoGIlZTYFHMvX42E0ZL/251GJ1KBafEgjoHz3Jxq26y8w0iPa+0M1ka7DQrCVeQlXRpwl+Hf/kzqTj3YqeqUbP/MewHAW9HtFZKO/8qykAB2SFeKhWm7nJpJjhZ4cyi1WR8mDPzHx2s7AmVvFJnRhgIAXx6GMQCZwjcxiitVjkdFJjZsPmuo95ZlupWp0HO32MxJntp6sdueWHQAmVP2Gka2Cva/n6Rf4zruTKO4YtE6IGeV1drqS5PX+qF1v6gVSXPry/e4a1nNrCjxRm7iPh+B/ElRifrgmk8=
 </pre>
 <p>
+Here is some random text created with that to try your luck at decryption (using a different password that was used in the 90s)
+<pre>
+U2FsdGVkX19fcPk4XIU/qWiyC4/tBUx7Azo62AONeVU=
+</pre>
+<p>
 <h1>Here are some useful information</h1>
+<pre>
 Jhoed 5103796458
 Shawn 5048136816
 Jaime 4156768964
@@ -20,3 +32,5 @@ Skylar 619-610-8586
 Caleb (619) 866-9103
 Hender 58 414 679 6031
 Osmar 52 777 716 1068
+</pre>
+
