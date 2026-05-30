@@ -1,3 +1,12 @@
+<h1>Encrypted Recovery Files (age)</h1>
+<p>Download <a href="my.age">my.age</a> and <a href="userdata.tgz.age">userdata.tgz.age</a>, then get the age tool from <a href="software.html">software.html</a>.</p>
+<p>Decrypt:</p>
+<pre>
+./age/age --decrypt -o my.txt my.age
+./age/age --decrypt -o userdata.tgz userdata.tgz.age
+tar xzf userdata.tgz
+</pre>
+<hr>
 
 <h1>Rescue File</h1>
 To use this rescue file, decrypt with AES tool (base 64, UTF-8, 256 bits, CBC, PKCS7, PBKDF2, SHA256, passphrase. 
