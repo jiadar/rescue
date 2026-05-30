@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Software – rescue.teamengine.org</title>
+<style>
+  body { font-family: monospace; max-width: 800px; margin: 40px auto; padding: 0 20px; background: #111; color: #eee; }
+  h1 { color: #fff; }
+  h2 { color: #aaa; margin-top: 2em; border-bottom: 1px solid #333; padding-bottom: 4px; }
+  a { color: #7af; }
+  code { background: #222; padding: 2px 6px; border-radius: 3px; }
+  pre { background: #1a1a1a; border: 1px solid #333; padding: 16px; border-radius: 4px; overflow-x: auto; line-height: 1.6; }
+  .checksum { font-size: 0.8em; color: #666; word-break: break-all; }
+  table { border-collapse: collapse; width: 100%; }
+  td, th { text-align: left; padding: 8px 12px; border-bottom: 1px solid #2a2a2a; }
+  th { color: #888; font-weight: normal; }
+</style>
+</head>
+<body>
+
+<h1>age – encryption tool</h1>
+<p>Version <strong>1.3.1</strong> &nbsp;·&nbsp; <a href="https://github.com/FiloSottile/age">github.com/FiloSottile/age</a></p>
+
+<h2>Downloads</h2>
+<table>
+  <tr><th>Platform</th><th>File</th><th>SHA-256</th></tr>
+  <tr>
+    <td>Linux x64</td>
+    <td><a href="software/age-linux-amd64.tar.gz">age-linux-amd64.tar.gz</a></td>
+    <td class="checksum">bdc69c09cbdd6cf8b1f333d372a1f58247b3a33146406333e30c0f26e8f51377</td>
+  </tr>
+  <tr>
+    <td>Linux ARM64</td>
+    <td><a href="software/age-linux-arm64.tar.gz">age-linux-arm64.tar.gz</a></td>
+    <td class="checksum">c6878a324421b69e3e20b00ba17c04bc5c6dab0030cfe55bf8f68fa8d9e9093a</td>
+  </tr>
+  <tr>
+    <td>macOS Apple Silicon</td>
+    <td><a href="software/age-darwin-arm64.tar.gz">age-darwin-arm64.tar.gz</a></td>
+    <td class="checksum">01120ea2cbf0463d4c6bd767f99f3271bbed1cdc8a9aa718a76ba1fe4f01998b</td>
+  </tr>
+  <tr>
+    <td>Windows x64</td>
+    <td><a href="software/age-windows-amd64.zip">age-windows-amd64.zip</a></td>
+    <td class="checksum">c56e8ce22f7e80cb85ad946cc82d198767b056366201d3e1a2b93d865be38154</td>
+  </tr>
+</table>
+
+<h2>Decrypt a file</h2>
+
+<p><strong>Linux / macOS</strong></p>
+<pre>tar xzf age-linux-amd64.tar.gz        # or age-darwin-arm64.tar.gz
+./age/age --decrypt -o plaintext.txt rescue.age
+# enter passphrase when prompted</pre>
+
+<p><strong>Windows (PowerShell)</strong></p>
+<pre>Expand-Archive age-windows-amd64.zip .
+.\age\age.exe --decrypt -o plaintext.txt rescue.age</pre>
+
+<h2>Verify checksum (optional but recommended)</h2>
+<pre># Linux
+sha256sum age-linux-amd64.tar.gz
+
+# macOS
+shasum -a 256 age-darwin-arm64.tar.gz
+
+# Windows PowerShell
+Get-FileHash age-windows-amd64.zip -Algorithm SHA256</pre>
+
+<p style="margin-top:3em"><a href="/">← back</a></p>
+</body>
+</html>
